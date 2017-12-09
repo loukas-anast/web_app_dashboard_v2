@@ -201,9 +201,9 @@
                     </div>
                     <div class="message">
                         <h4>MESSAGE USER</h4>
-                        <form>
-                            <input type="text" placeholder="Search for User" />
-                            <textarea placeholder="Message for User"></textarea>
+                        <form class="msg">
+                            <input type="text" placeholder="Search for User" required />
+                            <textarea placeholder="Message for User" required></textarea>
                             <button>SEND</button>
                         </form>
                     </div>
@@ -298,7 +298,10 @@
                                 }
                             }
                         });
-                    } 
+                    }
+                    document.querySelector('.msg').addEventListener('submit', function(){
+                        alert('Message sent successfuly.');
+                    }, false);
                 }());
             </script>
         </body>
